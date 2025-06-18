@@ -4,7 +4,7 @@
 
 ## Nhóm 1: Vũ Văn An, Lê Thanh Tùng, Đỗ Văn Bin
 
-Đây là bài tập lớn cuối kì môn Nhập môn trí tuệ nhân tạo, chúng tôi xây dựng một con game cơ bản về tìm đường đi trong mê cung bằng ngôn ngữ lập trình Java.
+Đây là bài tập lớn cuối kì môn Nhập môn trí tuệ nhân tạo, chúng tôi xây dựng một con game cơ bản về tìm đường đi trong mê cung sương mù bằng ngôn ngữ lập trình Java.
 
 ![image](https://github.com/user-attachments/assets/ac144644-33fa-440a-a66c-5e7b0f3773d1)
 
