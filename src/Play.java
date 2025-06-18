@@ -6,7 +6,7 @@ public class Play extends JFrame {
         add(new GamePanel());
         setResizable(false);
         pack();
-        setTitle("Cai Tui Ba Gang");
+        setTitle("Tim Duong Me Cung");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }

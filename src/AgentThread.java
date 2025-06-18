@@ -1,7 +1,7 @@
 public class AgentThread extends Thread {
     private GamePanel gamePanel;
     private boolean running;
-    private static final long DELAY = 50; // 0.5 giây
+    private static final long DELAY = 200; //
 
     public AgentThread(GamePanel gamePanel) {
         this.gamePanel = gamePanel;

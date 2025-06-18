@@ -4,9 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GamePanel extends JPanel implements ActionListener {
-    final int B_WIDTH = 700;
-    final int B_HEIGHT = 700;
-    final int DOT_SIZE = 35;
+    final int B_WIDTH = 900;
+    final int B_HEIGHT = 900;
+    final int DOT_SIZE = 45;
     int gold_count = 0, weight_count = 0;
     int DELAY = 150;
     boolean inGame = false, hint_show = false, play_again = false;
@@ -96,7 +96,7 @@ public class GamePanel extends JPanel implements ActionListener {
 
         if (!inGame){
             g.setColor(Color.RED);
-            g.setFont(new Font("Arial", Font.BOLD, 60));
+            g.setFont(new Font("Arial", Font.BOLD, 70));
             g.drawString(game_result, getXTextCenter(game_result, g), getYTextCenter(game_result, g));
         }
 
