@@ -1,9 +1,7 @@
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import java.io.File;
-import java.util.Stack;
 import java.util.ArrayList;
-import java.util.List;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
@@ -14,8 +12,6 @@ public class Player {
     int x, y;
     int n;
     int[][] fog;
-    int[][] dp;
-    int result;
     Clip clip;
     File sound;
 
