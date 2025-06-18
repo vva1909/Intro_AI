@@ -32,13 +32,6 @@ public class Map {
             maze[random_x][random_y] = 2;
             treasure_x = random_x * gp.DOT_SIZE;
             treasure_y = random_y * gp.DOT_SIZE;
-            System.out.println("Maze loaded from file:");
-            for (int i = 0; i < 32; i++) {
-                for (int j = 0; j < 32; j++) {
-                    System.out.print(maze[i][j] + " ");
-                }
-                System.out.println();
-            }
         } catch (IOException e) {
             System.err.println("Error reading the file: " + e.getMessage());
         } catch (NumberFormatException e) {

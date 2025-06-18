@@ -17,7 +17,6 @@ public class GetMouse implements MouseListener {
     public void mousePressed(MouseEvent e) {
         mouseX = e.getX();
         mouseY = e.getY();
-        System.out.println(mouseX + " " + mouseY);
         if (mouseX >= 200 && mouseX <= 290 && mouseY >= 910 && mouseY <= 950) {
             gp.initGame();
             gp.inGame = true;

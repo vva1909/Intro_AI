@@ -73,16 +73,37 @@ public class Player {
         targetX = gp.map.treasure_x / gp.DOT_SIZE;
         targetY = gp.map.treasure_y / gp.DOT_SIZE;
 
-        // Tìm đường đi bằng DFS
-        if (type == 0) dfs(x / gp.DOT_SIZE, y / gp.DOT_SIZE);
-        else dfs_A(x / gp.DOT_SIZE, y / gp.DOT_SIZE);
+        // Ghi nhận thời gian bắt đầu
+        long startTime = System.currentTimeMillis();
 
+        // Tìm đường đi bằng DFS hoặc Best First Search
+        boolean found = false;
+        if (type == 0) {
+            System.out.println("=== Use DFS ===");
+            found = dfs(x / gp.DOT_SIZE, y / gp.DOT_SIZE);
+        } else {
+            System.out.println("=== Use Best First Search ===");
+            found = dfs_A(x / gp.DOT_SIZE, y / gp.DOT_SIZE);
+        }
+
+        // Ghi nhận thời gian kết thúc
+        long endTime = System.currentTimeMillis();
+        long executionTime = endTime - startTime;
+
+        // In kết quả
+        if (found) {
+            System.out.println("Found path!");
+            System.out.println("Steps: " + path.size());
+            System.out.println("Time process: " + executionTime + " ms");
+        } else {
+            System.out.println("Path not found!");
+        }
+        System.out.println("================================");
     }
 
     private boolean dfs(int currentX, int currentY) {
         // Đánh dấu ô hiện tại đã thăm
         visited[currentX][currentY] = true;
-        System.out.println(currentX + " " + currentY);
         // Lưu lại bước đi hiện tại
         path.add(new Point(currentX, currentY));
 
@@ -117,7 +138,6 @@ public class Player {
     private boolean dfs_A(int currentX, int currentY) {
         // Đánh dấu ô hiện tại đã thăm
         visited[currentX][currentY] = true;
-        System.out.println(currentX + " " + currentY);
         // Lưu lại bước đi hiện tại
         path.add(new Point(currentX, currentY));
 
