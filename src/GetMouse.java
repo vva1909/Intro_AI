@@ -17,17 +17,17 @@ public class GetMouse implements MouseListener {
     public void mousePressed(MouseEvent e) {
         mouseX = e.getX();
         mouseY = e.getY();
-        if (mouseX >= 200 && mouseX <= 290 && mouseY >= 910 && mouseY <= 950) {
+        if (mouseX >= 150 && mouseX <= 240 && mouseY >= 710 && mouseY <= 750) {
             gp.initGame();
             gp.inGame = true;
         }
 
-        if (mouseX >= 610 && mouseX <= 700 && mouseY >= 910 && mouseY <= 950) {
+        if (mouseX >= 460 && mouseX <= 560 && mouseY >= 710 && mouseY <= 750) {
             gp.hint_show = !gp.hint_show;
             gp.player.FindSolution(0);
         }
 
-        if (mouseX >= 720 && mouseX <= 830 && mouseY >= 910 && mouseY <= 950) {
+        if (mouseX >= 570 && mouseX <= 680 && mouseY >= 710 && mouseY <= 750) {
             gp.hint_show = !gp.hint_show;
             gp.player.FindSolution(1);
         }

@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Random;
 
 public class Map {
-    int[][] maze = new int[32][32];
+    int[][] maze = new int[21][21];
     int treasure_x, treasure_y;
     GamePanel gp;
     public Map(GamePanel gp) {
@@ -15,19 +15,19 @@ public class Map {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             int row = 0;
-            while ((line = br.readLine()) != null && row < 32) {
+            while ((line = br.readLine()) != null && row < 20) {
                 String[] values = line.trim().split("\\s+");
 
-                for (int col = 0; col < 32 && col < values.length; col++) {
+                for (int col = 0; col < 20 && col < values.length; col++) {
                     maze[col][row] = Integer.parseInt(values[col]);
                 }
                 row++;
             }
-            int random_x = random.nextInt(32);
-            int random_y = random.nextInt(32);
+            int random_x = random.nextInt(2);
+            int random_y = random.nextInt(20);
             while (maze[random_x][random_y] != 1) {
-                random_x = random.nextInt(32);
-                random_y = random.nextInt(32);
+                random_x = random.nextInt(20);
+                random_y = random.nextInt(20);
             }
             maze[random_x][random_y] = 2;
             treasure_x = random_x * gp.DOT_SIZE;
